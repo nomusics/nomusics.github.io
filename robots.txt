@@ -1,0 +1,5 @@
+User-agent: *
+Disallow: /tag*
+Disallow: /tags*
+Allow: /
+Sitemap: http://www.taste1986.com/sitemap.xml

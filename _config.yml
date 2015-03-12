@@ -1,7 +1,7 @@
 title:            疯鱼的博客
 description:      念念碎碎，记录一些东西，防止老年痴呆~
 disqus_shortname: nomusics
-reading_time:     true
+reading_time:     false
 words_per_minute: 200
 # Your site's domain goes here (eg: //mmistakes.github.io, http://mademistakes.com, etc)
 # When testing locally leave blank or use http://localhost:4000
@@ -39,6 +39,7 @@ timezone:    Asia/Chongqing
 future:      true
 highlighter: pygments
 markdown:    kramdown
+encoding:    UTF-8
 gems:
   - jekyll-sitemap
 sass:
@@ -48,10 +49,9 @@ sass:
 # https://github.com/mojombo/jekyll/wiki/Permalinks
 permalink: /:year/:month/:day/:title/
 
-rss_limit: 10 
-
 # Amount of post to show on home page
 paginate: 5
+rss_limit: 10 
 
 kramdown:
   auto_ids: true

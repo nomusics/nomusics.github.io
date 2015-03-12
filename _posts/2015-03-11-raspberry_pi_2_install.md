@@ -1,5 +1,4 @@
 ---
-
 layout: post
 title: Raspberry Pi 2 首次安装
 description: "Raspberry Pi 2 首次安装"
@@ -7,6 +6,7 @@ modified: 2015-03-11
 tags: [Raspberry Pi]
 image:
   feature: abstract-12.jpg
+  thumb: raspberrypi/raspberrypi_install_thumb.png
 share: false
 ---
 ### Raspberry Pi 2 安装

@@ -9,9 +9,9 @@ image:
 {% for post in paginator.posts %}
 <article class="hentry">
   <header>
-    {% if post.image.feature %}
+    {% if post.image.thumb %}
       <div class="entry-image-index">
-        <a href="{{ site.url }}{{ post.url }}" title="{{ post.title }}"><img src="{{ site.url }}/images/{{ post.image.feature }}" alt="{{ post.title }}"></a>
+        <a href="{{ site.url }}{{ post.url }}" title="{{ post.title }}"><img src="{{ site.url }}/images/{{ post.image.thumb }}" alt="{{ post.title }}"></a>
       </div><!-- /.entry-image -->
     {% endif %}
     <div class="entry-meta">

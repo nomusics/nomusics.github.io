@@ -6,7 +6,7 @@ modified: 2015-03-11
 tags: [Raspberry Pi]
 image:
   feature: abstract-12.jpg
-  thumb: raspberrypi/raspberrypi_install_thumb.png
+  thumb: raspberrypi/raspberrypi_install_thumb.jpg
 share: false
 ---
 ### Raspberry Pi 2 安装

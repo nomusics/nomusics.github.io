@@ -4,7 +4,7 @@ layout: post
 title: Raspberry Pi 2 首次安装
 description: "Raspberry Pi 2 首次安装"
 modified: 2015-03-11
-tags: [sample post]
+tags: [Raspberry Pi]
 image:
   feature: abstract-12.jpg
 share: false
@@ -12,9 +12,14 @@ share: false
 ### Raspberry Pi 2 安装
 
 >系统自带的`vi`编辑器，在我的键盘上会有错误，所以安装`vim`，当然你也可以使用`nano`.	
-	
-#### 系统安装
 
+#### 系统下载
+
+树莓派系统可以从官网下载 [RASPBIAN](http://www.raspberrypi.org/downloads/){:target="_blank"}。如果你是新手建议使用 NOOBS 进行安装。
+
+使用NOOBS安装的用户，下载，解压，复制到TF卡，插入树莓派，通电，开机。
+
+#### 系统安装
 系统启动时发现了两条错误。
 {% highlight bash %}
 [FAIL] startpar: service(s) returned failure: hostname.sh ... failed!
@@ -83,47 +88,56 @@ sudo /etc/init.d/watchdog start
 #### 安装VNC
 
 1、安装VNC
-	
-	sudo apt-get install tightvncserver
-	
+{% highlight bash %}	
+sudo apt-get install tightvncserver
+{% endhighlight %}
 安装完成后，最好设置`vnc`开机自启，下载启动脚本
-
-	wget http://www.penguintutor.com/otherfiles/tightvncserver-init.txt
-	sudo mv tightvncserver-init.txt /etc/init.d/tightvncserver
-	
-脚本16行`export USER='pi'`，如果你修改过系统用户名，记得将此处修改一下。（系统默认用户`pi`）
+{% highlight bash %}
+wget http://www.penguintutor.com/otherfiles/tightvncserver-init.txt
+sudo mv tightvncserver-init.txt /etc/init.d/tightvncserver
+{% endhighlight %}	
+脚本16行`export USER='pi'`，如果你修改过系统用户名，记得将此处修改一下。（系统默认用户名`pi`）
 
 更改启动脚本用户组合用户，更改权限，增加自启
-
-	sudo chown root:root /etc/init.d/tightvncserver	sudo chmod 755 /etc/init.d/tightvncserver
-	sudo update-rc.d tightvncserver defaults
-	
+{% highlight bash %}
+sudo chown root:root /etc/init.d/tightvncserver
+sudo chmod 755 /etc/init.d/tightvncserver
+sudo update-rc.d tightvncserver defaults
+{% endhighlight %}	
 启动和停止命令
-	
-	sudo /etc/init.d/tightvncserver start
-	sudo /etc/init.d/tightvncserver stop
-	
+{% highlight bash %}	
+sudo /etc/init.d/tightvncserver start
+sudo /etc/init.d/tightvncserver stop
+{% endhighlight %}	
 启动命令运行以后，会提示你是否使用密码验证，最好设置一个密码。然后会提示：
-	
-	Would you like to enter a view-only password (y/n)?
-	
+{% highlight bash %}	
+Would you like to enter a view-only password (y/n)?
+{% endhighlight %}	
 输入`n`，不启用。
+{% highlight bash %}
+New 'X' desktop is nomusics-pi:1
 
-	New 'X' desktop is nomusics-pi:1
+Creating default startup script /home/pi/.vnc/xstartup
+Starting applications specified in /home/pi/.vnc/xstartup
+Log file is /home/pi/.vnc/nomusics-pi:1.log
 
-	Creating default startup script /home/pi/.vnc/xstartup
-	Starting applications specified in /home/pi/.vnc/xstartup
-	Log file is /home/pi/.vnc/nomusics-pi:1.log
-
-	Starting TightVNC server for pi 
-	
+Starting TightVNC server for pi 
+{% endhighlight %}	
 这样就启动完成，并且创建了编号为`1`的桌面。
 
-下载 [VNC Viewer](http://www.realvnc.com/download/viewer/) 进行连接。
+下载 [VNC Viewer](http://www.realvnc.com/download/viewer/){:target="_blank"} 进行连接。
 
 ![VNC Viewer login](/images/raspberrypi/VNCViewer.png)
 
+`VNC Server` 输入树莓派IP地址格式为：`IP:[桌面编号]`，桌面编号就是上面安装成功后给出的编号。连接成功后，就可以看到你得树莓派桌面了。
 
+![VNC Viewer connect](/images/raspberrypi/VNCViewer_connect.png)
+
+输入安装时候的密码。
+
+![VNC Viewer desktop](/images/raspberrypi/VNCViewer_desktop.png)
+
+接下来享受你的树莓派吧~
 	
 	
 	

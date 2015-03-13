@@ -45,6 +45,9 @@ sudo -s
 apt-get update
 apt-get upgrade
 {% endhighlight %}	
+
+<!--more-->
+
 #### 看门狗（watchdog）
 
 1、加载看门狗模块，编辑`/etc/modules`增加`bcm2708_wdog`

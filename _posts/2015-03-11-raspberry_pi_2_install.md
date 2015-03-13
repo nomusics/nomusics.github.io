@@ -76,7 +76,7 @@ max-temperature = 80000  		#超过80度就重启
 {% endhighlight %}
 4、配置开机自启
 {% highlight bash %}	
-chkconfig watchdog on
+sudo chkconfig watchdog on
 sudo /etc/init.d/watchdog start
 {% endhighlight %}	
 看到出现
@@ -105,7 +105,7 @@ sudo mv tightvncserver-init.txt /etc/init.d/tightvncserver
 {% highlight bash %}
 sudo chown root:root /etc/init.d/tightvncserver
 sudo chmod 755 /etc/init.d/tightvncserver
-sudo update-rc.d tightvncserver defaults
+sudo chkconfig tightvncserver on
 {% endhighlight %}	
 启动和停止命令
 {% highlight bash %}	

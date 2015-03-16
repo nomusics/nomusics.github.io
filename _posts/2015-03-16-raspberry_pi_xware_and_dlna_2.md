@@ -5,6 +5,7 @@ modified: 2015-03-16
 tags: [Raspberry Pi,DLNA,Xware]
 image:
   feature: abstract-1.jpg
+  thumb: raspberrypi/raspberrypi_install_dlna_thumb.jpg
 share: false
 ---
 名词解释：

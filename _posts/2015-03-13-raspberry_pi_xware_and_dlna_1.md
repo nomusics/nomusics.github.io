@@ -164,7 +164,7 @@ sudo unzip Xware*.*.**_armel_v5te_glibc.zip -d /home/xware
 
 {% highlight bash %}
 pi@nomusics-pi ~ $ cd /home/xware/
-pi@nomusics-pi /home/xware $ ./portal
+pi@nomusics-pi /home/xware $ sudo ./portal
 initing...
 try stopping xunlei service first...
 killall: ETMDaemon: no process killed

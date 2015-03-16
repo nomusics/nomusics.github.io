@@ -266,6 +266,8 @@ xware                     0:off  1:off  2:on   3:on   4:on   5:on   6:off
 
 由于minidlna不支持rm，rmvb格式，需要修改代码重新编译，篇幅较长，所以单独写一篇关于minidlna安装并且增加对rm，rmvb格式支持的教程。
 
+[Raspberry Pi 2安装迅雷和DLNA（二）](/2015/03/16/raspberry_pi_xware_and_dlna_2.html)
+
 ### Samba[^1]
 Samba 是最常用的了，Windows、Linux、小米电视都支持！
 

@@ -5,6 +5,7 @@ modified: 2015-03-13
 tags: [Raspberry Pi,DLNA,Xware]
 image:
   feature: abstract-1.jpg
+  thumb: raspberrypi/raspberrypi_install_xware_thumb.jpg
 share: false
 ---
 

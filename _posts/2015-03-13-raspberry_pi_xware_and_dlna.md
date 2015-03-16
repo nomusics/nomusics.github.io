@@ -1,7 +1,8 @@
 ---
 layout: post
-title: Raspberry Pi 2安装迅雷和DLNA
+title: Raspberry Pi 2安装迅雷和DLNA（一）
 modified: 2015-03-13
+tags: [Raspberry Pi,DLNA,Xware]
 image:
   feature: abstract-1.jpg
 share: false
@@ -262,7 +263,45 @@ xware                     0:off  1:off  2:on   3:on   4:on   5:on   6:off
 
 ### DLNA
 
-### Samba
+由于minidlna不支持rm，rmvb格式，需要修改代码重新编译，篇幅较长，所以单独写一篇关于minidlna安装并且增加对rm，rmvb格式支持的教程。
+
+### Samba[^1]
+Samba 是最常用的了，Windows、Linux、小米电视都支持！
+
+先安装相关组件：
+
+{% highlight bash %}
+sudo apt-get install samba samba-common-bin
+{% endhighlight %}
+
+编辑配置文件/etc/samba/smb.conf：
+
+{% highlight bash %}
+[global]
+    workgroup = WORKGROUP
+    security = user
+    guest account = pi
+    map to guest = bad user
+    wins support = yes
+    log level = 1
+    max log size = 1000
+
+[usb]
+    path = /home/Share/usb
+    read only = no
+    force user = pi
+    force group = pi
+    guest ok = yes
+{% endhighlight %}
+
+重启服务：
+
+{% highlight bash %}
+sudo service samba restart
+{% endhighlight %}
+
+打开你的其它电脑，看看是不是可以看到了？如果看不到可以用IP访问。
+
 
 [^1]: 来源[利用树莓派组建支持迅雷离线下载的NAS](http://www.dozer.cc/2014/05/raspberry-pi-nas/){:target="_blank"}
 

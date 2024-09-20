@@ -6,8 +6,8 @@ title: 'NOMUSICS'
 description: 'I am amazing.'
 
 # Images
-avatar: 'avatar.jpg'
-background: 'background.jpg'
+avatar: 'https://picsum.photos/180'
+background: 'https://picsum.photos/1280/800'
 favicon: 'favicon.ico'
 
 # Online profiles

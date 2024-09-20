@@ -2,8 +2,8 @@
 remote_theme: epidrome/cover-card@main
 
 # Title and tag line
-title: 'NOMUSICS'
-description: 'I am amazing.'
+title: 'Hello World'
+description: 'Eat, Sleep, Play, Rave'
 
 # Images
 avatar: 'https://picsum.photos/180'
